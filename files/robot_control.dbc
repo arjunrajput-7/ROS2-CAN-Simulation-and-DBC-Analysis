@@ -1,0 +1,54 @@
+VERSION ""
+
+NS_ :
+    NS_DESC_
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+    CAT_DEF_
+    CAT_
+    FILTER
+    BA_DEF_DEF_
+    EV_DATA_
+    ENVVAR_DATA_
+    SGTYPE_
+    SGTYPE_VAL_
+    BA_DEF_SGTYPE_
+    BA_SGTYPE_
+    SIG_TYPE_REF_
+    SIG_GROUP_
+    SIG_VALTYPE_
+    SIG_UNIT_
+    CG_DB_
+    CG_
+    BO_TRANS_
+    BS_
+    MUX_VAL_
+    CANW_
+
+BS_:
+
+BU_: Navigation IntegratedController
+
+BO_ 1553 Nav_Msg_0x611: 8 Navigation
+ SG_ LinearVelocity : 0|8@1+ (1,0) [0|255] "m/s" IntegratedController
+ SG_ AngularVelocity : 8|8@1+ (1,0) [0|255] "rad/s" IntegratedController
+
+BO_ 1554 Nav_Msg_0x612: 8 Navigation
+ SG_ DriveMode : 0|8@1+ (1,0) [0|255] "" IntegratedController
+ SG_ TargetAngle : 16|16@1+ (0.1,0) [-3276.8|3276.7] "deg" IntegratedController
+
+BO_ 1617 IC_Msg_0x651: 8 IntegratedController
+ SG_ FeedbackLinearSpeed : 0|16@1+ (0.01,0) [0|655.35] "m/s" Navigation
+ SG_ FeedbackAngularSpeed : 16|16@1+ (0.01,0) [0|655.35] "rad/s" Navigation
+
+BO_ 1635 IC_Msg_0x663: 8 IntegratedController
+ SG_ TriggerStatus : 24|8@1+ (1,0) [0|255] "" Navigation
+ SG_ FaultCode : 32|8@1+ (1,0) [0|255] "" Navigation
+
+BO_ 1636 IC_Msg_0x664: 8 IntegratedController
+ SG_ Sensor1 : 0|8@1+ (1,0) [0|255] "" Navigation
+ SG_ Sensor2 : 8|8@1+ (1,0) [0|255] "" Navigation
+ SG_ Sensor3 : 16|8@1+ (1,0) [0|255] "" Navigation
+ SG_ Sensor4 : 24|8@1+ (1,0) [0|255] "" Navigation
